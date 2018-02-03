@@ -1,4 +1,5 @@
 ## Steps to setup django
+### don't forget to workon "evn" when logged into vagrant server
 ### in local directory
 - install virtualbox
 - install vagrant, vagrant init, & use vagrantfile to determine OS
@@ -40,3 +41,10 @@
 - cd /vagrant/src/"project name"
 - python manage.py makemigrations (creates the blueprint for updating the database with the model)
 - python manage.py migrate (creates the database)
+
+### django admin
+- create a superuser: python manage.py createsuperuser
+- register superuser in admin.py file of api app:
+- in admin.py:
+    - from . import models
+    - admin.site.register(UserProfile)
