@@ -26,4 +26,17 @@
 - in vagrant server, logged in to virtualenv, in /vagrant/ folder:
 - pip freeze (view packages installed)
 - pip freeze > requirements.txt
-- 
+
+### run test server
+- in vagrant server, logged into virtualenv:
+- cd /vagrant/src/"project name"
+- python manage.py runserver 0.0.0.0:8080
+- This runs the server on all ip's, out of port 8080. This means on the local computer, the server will be accessible at the ip address specified in the vagrantfile
+
+### creating models
+- creating the models: see models.py file for example
+- update settings.py to update any defaults to the new one (like default user model)
+- in vagrant server, logged into virtualenv:
+- cd /vagrant/src/"project name"
+- python manage.py makemigrations (creates the blueprint for updating the database with the model)
+- python manage.py migrate (creates the database)
