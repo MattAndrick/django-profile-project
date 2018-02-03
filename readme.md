@@ -48,3 +48,18 @@
 - in admin.py:
     - from . import models
     - admin.site.register(UserProfile)
+
+### API Views
+- open views.py file in application directory
+- Imports:
+    - from rest_framework.views import APIView
+    - from rest_framework.response import Response
+- define classes for view responses
+- map url to view:
+- in urls.py for the project,
+    - import include: from django.conf.urls import include
+    - add url pattern to list and map to the app urls file using the include call
+- create the urls file in the app directory
+    - from django.conf.urls import url
+    - from . import views
+    - define url patterns w/ views
