@@ -63,3 +63,16 @@
     - from django.conf.urls import url
     - from . import views
     - define url patterns w/ views
+
+### Create Serializer & POST
+- create file called serializers.py in application direcotry
+- import serializers from DRF
+    - from rest_framework import serializers
+- define serialize function
+- now add it to the view, in apps view.py file:
+    - import serilizer file: from . import serializers
+    - add post function w/ any desired validation
+
+### Add remaining REST functions
+- in views.py within application directory:
+- create put function
