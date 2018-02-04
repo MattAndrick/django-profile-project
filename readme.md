@@ -87,4 +87,13 @@ Allows List, create, retrieve, update, partial update and destroy
 - in urls.py within api app, import rest_framework DefaultRouter
 - define the router from the import, and register it with a name and the desired view
 - add the url to the url pattern list (still in urls.py)
+
+### permissions
+- restricts any user from updating any other users' profile
+- create a permissions.py file in api app
+- import permissions from rest framework
+- create a class to validate user requesting a change is the owner of the object being changed
+- add auth and permissions to views.py
+    - import TokenAuthentication from rest framework
+    - update viewset class to add tuples specifying desired auth classes, and permission classes
 - 
