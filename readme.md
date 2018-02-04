@@ -50,6 +50,7 @@
     - admin.site.register(UserProfile)
 
 ### API Views
+The next segments will explain how APIView is used
 - open views.py file in application directory
 - Imports:
     - from rest_framework.views import APIView
@@ -76,3 +77,14 @@
 ### Add remaining REST functions
 - in views.py within application directory:
 - create put function
+
+### Viewsets
+This segment will show how to use viewsets instead of API View  
+Allows List, create, retrieve, update, partial update and destroy
+
+- import viewsets from rest_framework in views.py
+- create desired class, and define a function (such as list)
+- in urls.py within api app, import rest_framework DefaultRouter
+- define the router from the import, and register it with a name and the desired view
+- add the url to the url pattern list (still in urls.py)
+- 
