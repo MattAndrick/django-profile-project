@@ -96,4 +96,10 @@ Allows List, create, retrieve, update, partial update and destroy
 - add auth and permissions to views.py
     - import TokenAuthentication from rest framework
     - update viewset class to add tuples specifying desired auth classes, and permission classes
-- 
+
+### search functionality
+- search for objects
+- update views.py file from app
+- import filters from rest_framework
+- add filters_backend tuple to class w/ searchfilter function
+- create search_field tuple to specify the fields that can be used to search
