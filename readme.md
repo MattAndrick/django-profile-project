@@ -114,3 +114,13 @@ Allows List, create, retrieve, update, partial update and destroy
     - define a create function that returns obtainauthtoken and posts
 - in urls.py of app
     - register the login view with the router
+
+### adding a new model
+- create the model in the apps model.py file
+- create and run migration
+    - access server and login to virtual env, cd to project directory
+    - python manage.py makemigrations
+    - python manage.py migrate
+- register to admin page
+    - in admin.py for app:
+    - admin.site.register("model")

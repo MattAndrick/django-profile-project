@@ -70,3 +70,15 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         django uses this when in needs to conver the object to a string
         '''
         return self.email
+
+class ProfileFeedItem(models.Model):
+    '''profile status update'''
+
+    user_profile = models.ForeignKey('UserProfile', on_delete=models.CASCADE) #if user deletes profile, delte status fields too (cascade)
+    status_text = models.CharField(max_length=255)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        '''return the model as a string'''
+
+        return self.status_text
