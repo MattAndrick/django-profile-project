@@ -103,3 +103,14 @@ Allows List, create, retrieve, update, partial update and destroy
 - import filters from rest_framework
 - add filters_backend tuple to class w/ searchfilter function
 - create search_field tuple to specify the fields that can be used to search
+
+### login functionality
+- create a viewset that acts as a login/auth form
+- in views.py of app
+    - import authtokenserializer
+    - import obtain auth token
+    - add a class for the loginView
+    - create a authtokenserializer 
+    - define a create function that returns obtainauthtoken and posts
+- in urls.py of app
+    - register the login view with the router
