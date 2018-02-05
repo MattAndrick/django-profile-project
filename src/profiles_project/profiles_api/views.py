@@ -143,7 +143,8 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     serializer_class = serializers.ProfileFeedItemSerializer
     queryset = models.ProfileFeedItem.objects.all()
-    permission_classes = (permissions.PostOwnStatus, IsAuthenticated,) #if this ISAuthenticatedOrReadOnly, then non users can still see status but cant update. This way they cant see or update.
+    #if the following IsAuthenticatedOrReadOnly, then non users can still see status but cant update. This way they cant see or update.
+    permission_classes = (permissions.PostOwnStatus, IsAuthenticated,) #throws 401 Unauthorized if non user attempts to view
 
     def perform_create(self, serializer):
         '''sets the user profile to the logged in user'''
